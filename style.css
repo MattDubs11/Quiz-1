@@ -7,18 +7,12 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* =========================
-   CONTAINER
-   ========================= */
 .container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* =========================
-   HEADER
-   ========================= */
 .header {
   display: flex;
   justify-content: space-between;
@@ -33,9 +27,6 @@ body {
   color: black;
 }
 
-/* =========================
-   HERO SECTION
-   ========================= */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -55,9 +46,6 @@ body {
   text-align: center;
 }
 
-/* =========================
-   GRID SECTION
-   ========================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -71,9 +59,6 @@ body {
   transition: 0.2s ease;
 }
 
-/* =========================
-   BUTTON
-   ========================= */
 .btn {
   display: inline-block;
   padding: 10px 14px;
@@ -83,9 +68,6 @@ body {
   transition: 0.2s ease;
 }
 
-/* =========================
-   HOVER STYLES
-   ========================= */
 .btn:hover {
   background-color: black;
   color: white;
@@ -96,9 +78,6 @@ body {
   transform: translateY(-3px);
 }
 
-/* =========================
-   FOOTER
-   ========================= */
 .footer {
   padding: 16px;
   text-align: center;
@@ -106,18 +85,14 @@ body {
   margin-top: 40px;
 }
 
-/* =========================
-   TABLET BREAKPOINT (601–900px)
-   ========================= */
+/* Tablet */
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* =========================
-   MOBILE BREAKPOINT (0–600px)
-   ========================= */
+/* Mobile */
 @media (max-width: 600px) {
 
   .header {
