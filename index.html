@@ -1,36 +1,113 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Quiz Site</title>
 
 <style>
 * { box-sizing: border-box; }
-body { margin: 0; font-family: Arial, sans-serif; }
-.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
-.header { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid #ddd; }
-.nav a { margin-left: 16px; text-decoration: none; color: black; }
-.hero { display: flex; justify-content: space-between; align-items: center; padding: 40px 0; gap: 40px; }
-.hero-text { flex: 1; }
-.hero-card { width: 240px; padding: 16px; border: 1px solid #ddd; text-align: center; }
-.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; padding: 20px 0; }
-.card { border: 1px solid #ddd; padding: 18px; transition: 0.2s ease; }
-.btn { display: inline-block; padding: 10px 14px; border: 1px solid black; text-decoration: none; color: black; transition: 0.2s ease; }
-.btn:hover { background-color: black; color: white; }
-.card:hover { background-color: #f5f5f5; transform: translateY(-3px); }
-.footer { padding: 16px; text-align: center; border-top: 1px solid #ddd; margin-top: 40px; }
+body { margin: 0; font-family: Arial; }
 
-@media (max-width: 900px) {
-  .grid { grid-template-columns: repeat(2, 1fr); }
+/* ===== CONTAINER FIX ===== */
+.container { 
+  max-width: 1000px; 
+  margin: 0 auto; 
+  padding: 0 20px; 
 }
 
+/* ===== HEADER FIX ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav a { margin-right: 8px; }
+
+/* ===== HERO FIX ===== */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.hero-card {
+  width: 240px;
+  padding: 16px;
+  border: 1px solid #ddd;
+}
+
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 12px;
+  padding: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 18px;
+  transition: 0.2s ease;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid black;
+  text-decoration: none;
+}
+
+/* ===== HOVER STYLES (Required) ===== */
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.card:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-3px);
+}
+
+.footer {
+  padding: 16px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+/* ===== TABLET BREAKPOINT ===== */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ===== MOBILE BREAKPOINT ===== */
 @media (max-width: 600px) {
-  .header { flex-direction: column; align-items: center; gap: 10px; }
-  .nav { display: flex; flex-direction: column; align-items: center; }
-  .nav a { margin: 6px 0; }
-  .hero { flex-direction: column; text-align: center; }
-  .grid { grid-template-columns: 1fr; }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 </head>
@@ -38,33 +115,36 @@ body { margin: 0; font-family: Arial, sans-serif; }
 <body>
 
 <header class="header">
-  <div class="logo">My Portfolio</div>
-  <nav class="nav">
-    <a href="#">Home</a>
-    <a href="#">Gallery</a>
-    <a href="#">Contact</a>
-  </nav>
+<div class="logo">My Portfolio</div>
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+</nav>
 </header>
 
 <main class="container">
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Data and Design</h1>
-      <p>Clean layout, responsive grid, no frameworks.</p>
-      <a class="btn" href="#">See Gallery</a>
-    </div>
-    <div class="hero-card">
-      <p>KPI</p>
-      <h2>72%</h2>
-    </div>
-  </section>
 
-  <section class="grid">
-    <div class="card">Card 1</div>
-    <div class="card">Card 2</div>
-    <div class="card">Card 3</div>
-    <div class="card">Card 4</div>
-  </section>
+<section class="hero">
+<div class="hero-text">
+<h1>Data and Design</h1>
+<p>Clean layout, responsive grid, no frameworks.</p>
+<a class="btn" href="gallery.html">See Gallery</a>
+</div>
+
+<div class="hero-card">
+<p>KPI</p>
+<h2>72%</h2>
+</div>
+</section>
+
+<section class="grid">
+<div class="card">Card 1</div>
+<div class="card">Card 2</div>
+<div class="card">Card 3</div>
+<div class="card">Card 4</div>
+</section>
+
 </main>
 
 <footer class="footer">2026</footer>
